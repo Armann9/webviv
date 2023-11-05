@@ -93,9 +93,3 @@ async function rate(game, n) {
         }
         return rateObj;
     }
-
-
-
-    const test =  await gamesData()
-
-    console.log(Object.values(test.rate1[0]));
