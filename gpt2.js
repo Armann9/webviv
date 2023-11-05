@@ -86,13 +86,16 @@ export async function gamesData() {
 async function rate(game, n) {
         const rateN = await game.$eval(`div.sport-base-event--pDx9cf > div:nth-child(${n}) `, e => e.innerText)
         const rateNumber = rateN.replace(/-/g, '0')
-        const keyDate = new Date()
+        const keyDate = new Date().getTime()
         const rateObj = {
-            keyDate: rateNumber,
+        // keyDate: rateNumber
+        [keyDate]: rateNumber
         }
         return rateObj;
     }
 
 
 
-    // gamesData()
+    const test =  await gamesData()
+
+    console.log(Object.values(test.rate1[0]));
