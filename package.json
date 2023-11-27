@@ -1,0 +1,26 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Node JS testing",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "node , nodejs",
+    "start": "node, nodejs"
+  },
+  "author": "Arman Barseghyan <test@test.am>",
+  "license": "ISC",
+  "dependencies": {
+    "chromium": "^3.0.3",
+    "lodash": "^4.17.21",
+    "mysql2": "^3.6.1",
+    "puppeteer": "^19.11.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-recaptcha": "^3.6.8",
+    "util": "^0.12.5"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": []
+}

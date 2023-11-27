@@ -20,7 +20,13 @@ export function dataMysql() {
 
     const insertQuery = `
     INSERT INTO games_events (eventId, team1, team2, rate1, ratex, rate2, rate_history) VALUES (?, ?, ?, ?, ?, ?, ?)
-      ON DUPLICATE KEY UPDATE team1 = VALUES(team1), team2 = VALUES(team2), rate1 = VALUES(rate1), ratex = VALUES(ratex), rate2 = VALUES(rate2), rate_history = VALUES(rate_history)`;
+      ON DUPLICATE KEY UPDATE 
+      team1 = VALUES(team1), 
+      team2 = VALUES(team2), 
+      rate1 = VALUES(rate1), 
+      ratex = VALUES(ratex), 
+      rate2 = VALUES(rate2), 
+      rate_history = VALUES(rate_history)`;
 
     for (const event of games_events) {
         const rateHistoryJson = JSON.stringify({
