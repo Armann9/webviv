@@ -1,9 +1,9 @@
 import mysql from 'mysql2';
 import { gamesData } from './gpt2.js';
 
-const games_events = await gamesData()
+const games_events = await gamesData();
 
-export function dataMysql() {
+export async function dataMysql() {
 
     const connection = mysql.createConnection({
         host: 'localhost',
@@ -12,10 +12,12 @@ export function dataMysql() {
         database: 'test10',
     });
 
-    // const games_events = await gamesData()
+    // const games_events = await fun()
+    // const games_events = await gamesData();
+
+
 
     connection.connect();
-
 
 
     const insertQuery = `
@@ -28,7 +30,7 @@ export function dataMysql() {
       rate2 = VALUES(rate2),
       rate_history = JSON_MERGE_PRESERVE(rate_history, VALUES(rate_history))
 `;
-      
+
     //   rate1 = VALUES(rate1), 
     //   ratex = VALUES(ratex), 
     //   rate2 = VALUES(rate2), 

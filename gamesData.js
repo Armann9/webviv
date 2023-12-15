@@ -8,7 +8,7 @@ export async function gamesData() {
         // devtools: true
     });
     const page = await browser.newPage();
-    const url = 'https://fon.bet/live/football';
+    const url = 'https://www.fon.bet/sports/football/';
 
     await page.goto(url);
 
@@ -19,7 +19,7 @@ export async function gamesData() {
 
     await page.setViewport({
         width: 7680,
-        height: 4320,
+        height: 13680,
     });
 
     const games = await page.$$('div[class^="sport-base-event--"]');
@@ -65,7 +65,7 @@ export async function gamesData() {
     );
     console.log('total games list', gamesList.length)
     console.log('total games Array', gamesArray.length)
-    // console.log(gamesArray)
+    console.log(gamesArray)
 
 
     await page.waitForTimeout(1000);
@@ -94,4 +94,4 @@ async function rate(game, n) {
     }
 
 
-    // gamesData();
+    gamesData();
